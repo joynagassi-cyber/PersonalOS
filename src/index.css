@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0066FF;
+  --secondary: #0052CC;
+  --deep: #003380;
+  --accent: #4D9FFF;
+  --highlight: #00B4FF;
+  --success: #00C4B4;
+  --danger: #FF4D6A;
+
+  /* DARK MODE - FONDS NEUTRES PURS (zéro teinte bleue) */
+  --bg: #0A0A0A;
+  --surface: #111111;
+  --surface-2: #1A1A1A;
+  --surface-3: #222222;
+  --border: rgba(255, 255, 255, 0.07);
+  --border-hover: rgba(255, 255, 255, 0.16);
+  --text: #F0F0F0;
+  --text-muted: #888888;
+  --text-subtle: #555555;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] {
+  /* LIGHT MODE - FONDS BLANCS PURS (zéro teinte bleue) */
+  --bg: #FFFFFF;
+  --surface: #F7F7F7;
+  --surface-2: #F0F0F0;
+  --surface-3: #E8E8E8;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.18);
+  --text: #111111;
+  --text-muted: #666666;
+  --text-subtle: #999999;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Base custom definitions */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom CSS classes for perfect font matching */
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono-jb {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-dm {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Animations section */
+@keyframes kenburns {
+  0% {
+    transform: scale(1.04) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.06) translate(1%, -0.5%);
+  }
+  100% {
+    transform: scale(1.09) translate(1.5%, -1%);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenburns 600s linear infinite alternate;
+}
+
+/* Infinite ticker animation */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 240s linear infinite;
+}
+
+/* Clean scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-3);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-subtle);
+}
+
+/* Theme-related standard transition class */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

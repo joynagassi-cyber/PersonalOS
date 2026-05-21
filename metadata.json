@@ -1,0 +1,6 @@
+{
+  "name": "DashPro",
+  "description": "Dashboard personnel de pilotage intensif sur 7 mois pour lancer un SaaS et atteindre 100 000 clients.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
